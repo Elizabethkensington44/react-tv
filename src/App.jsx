@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { tvShows } from "./shows/data";
 import ShowDetails from "./shows/ShowDetails";
 import ShowSelection from "./shows/ShowSelection";
 
@@ -19,7 +20,9 @@ export default function App() {
           setSelectedShow={setSelectedShow}
         />
       </header>
-      <main></main>
+      <main>
+        <ShowDetails key={selectedShow?.name} show={selectedShow} />
+      </main>
     </>
   );
 }
